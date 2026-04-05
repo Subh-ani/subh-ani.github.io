@@ -69,16 +69,55 @@
         max-width: 900px;
         margin: auto;
       }
+      nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 50, 60, 0.9);
+      padding: 10px 12px;
+      z-index: 1000;
+    }
 
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 6px 4px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #d4fff6;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(0.78rem, 3vw, 0.9rem);
+      padding: 4px 8px;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    @media (max-width: 480px) {
+      nav ul li a {
+        font-size: 0.82rem;
+        padding: 5px 7px;
+      }
+
+      nav ul {
+        gap: 4px 2px;
+      }
+    }
       /* HERO */
       #home {
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
 
       .profile-pic {
         width: 140px;
@@ -486,7 +525,9 @@
 
        <!-- BLOG -->
       <section id="blog">
-        <h2>Articles</h2>
+        <h2>Articles and Blogs</h2>
+        <p style="margin-bottom: 20px;"></p>
+
         <div class="blog-grid" id="blog-posts"></div>
 
         <div class="more-blogs">
